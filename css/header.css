@@ -1,0 +1,169 @@
+header.flex {
+  justify-content: space-between;
+  padding-inline: 8%;
+  padding-top: 1.2rem;
+
+  & .links .fa-solid {
+    margin-right: 0.3rem;
+  }
+
+  & .sign-in {
+    margin-inline: 1rem;
+  }
+
+  & .sign-in,
+  & .Complaints,
+  & .who,
+  & .register {
+    border: 1px solid var(--bodyFont);
+    padding: 0.44rem 1rem;
+    border-radius: 55px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  & .sign-in:hover,
+  & .Complaints:hover,
+  & .who:hover,
+  & .register:hover,
+  & .sign-in:hover .fa-solid,
+  & .who:hover .fa-solid,
+  & .Complaints:hover .fa-solid,
+  & .register:hover .fa-solid {
+    background-color: var(--bodyFont);
+    color: var(--blue);
+  }
+
+  & .cart {
+    background-color: var(--bodyFont);
+    color: var(--blue);
+    font-size: 0.9rem;
+    padding: 0.44rem 1.1rem 0.44rem 0.6rem;
+    border-radius: 55px;
+  }
+
+  & .cart .fa-solid {
+    color: var(--blue);
+  }
+
+  & .products-number {
+    position: absolute;
+    right: 0;
+    top: -5px;
+    font-size: 0.7rem;
+    font-weight: bold;
+
+    background-color: rgb(255, 90, 123);
+    height: 20px;
+    width: 20px;
+    color: #100ac7;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+  }
+
+  /* ======================
+    Left Section (Logo)
+==========================*/
+  & .logo {
+    font-size: 3rem;
+  }
+}
+
+@media (width < 600px) {
+  header.flex {
+    justify-content: center;
+    padding-inline: 0;
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .logo {
+      display: none;
+    }
+  }
+}
+
+/* ==============================
+When dcroll down on the home page 
+=================================*/
+header.scroll-down {
+  position: fixed;
+  right: 0;
+  left: 0;
+  padding-bottom: 0.5rem;
+  background-color: var(--footer-bg);
+  color: #fff;
+  z-index: 11;
+
+  & .fa-bag-shopping,
+  & .fa-user-plus,
+  & .fa-right-to-bracket {
+    color: white;
+  }
+
+  & .logo {
+    font-size: 0.8rem;
+  }
+
+  & .logo .fa-bag-shopping {
+    font-size: 1.66rem;
+  }
+}
+/* ==============================
+ Product List
+=================================*/
+*{
+  padding: 0;
+  margin: 0;
+  font-family: roboto;
+}
+body {
+  background-color: #f47c0a;
+}
+ul {
+  list-style: none;
+  background-color: #f47c0a;
+  text-align: right;
+}
+ul li{
+  display: inline-block;
+  position: relative;
+}
+ul li a{
+  display: block;
+  padding: 10px 10px ;
+  font-size: 20px;
+  color: #000000;
+  text-decoration: none;
+  text-align: right;
+  
+}
+
+ul li ul.dropdown li{
+  display: block;
+  background: #f47c0a;
+  margin: 0;
+
+}
+ul li ul.dropdown{
+  width: auto;
+  background: #000000;
+  position: absolute;
+  z-index: 999;
+  display: none;
+
+}
+ul li a:hover{
+  background: #f47c0a;
+}
+ul li:hover  ul.dropdown{
+  display: block;
+}
